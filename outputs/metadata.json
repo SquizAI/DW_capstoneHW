@@ -1,0 +1,96 @@
+{
+    "dataset_name": "Used Cars Dataset",
+    "source": "GitHub - Machine Learning with R datasets",
+    "num_records": 150,
+    "num_columns": 6,
+    "columns": [
+        "year",
+        "model",
+        "price",
+        "mileage",
+        "color",
+        "transmission"
+    ],
+    "column_dtypes": {
+        "year": "int64",
+        "model": "object",
+        "price": "int64",
+        "mileage": "int64",
+        "color": "object",
+        "transmission": "object"
+    },
+    "missing_values": {
+        "year": 0,
+        "model": 0,
+        "price": 0,
+        "mileage": 0,
+        "color": 0,
+        "transmission": 0
+    },
+    "numerical_columns_stats": {
+        "year": {
+            "min": 2000.0,
+            "max": 2012.0,
+            "mean": 2008.7266666666667,
+            "median": 2009.0,
+            "std": 2.200965824197213
+        },
+        "model": {
+            "min": null,
+            "max": null,
+            "mean": null,
+            "median": null,
+            "std": null
+        },
+        "price": {
+            "min": 3800.0,
+            "max": 21992.0,
+            "mean": 12961.933333333332,
+            "median": 13591.5,
+            "std": 3122.4817346855993
+        },
+        "mileage": {
+            "min": 4867.0,
+            "max": 151479.0,
+            "mean": 44260.64666666667,
+            "median": 36385.0,
+            "std": 26982.104321928236
+        },
+        "color": {
+            "min": null,
+            "max": null,
+            "mean": null,
+            "median": null,
+            "std": null
+        },
+        "transmission": {
+            "min": null,
+            "max": null,
+            "mean": null,
+            "median": null,
+            "std": null
+        }
+    },
+    "categorical_columns_unique_values": {
+        "model": [
+            "SEL",
+            "SE",
+            "SES"
+        ],
+        "color": [
+            "Yellow",
+            "Gray",
+            "Silver",
+            "White",
+            "Blue",
+            "Black",
+            "Green",
+            "Red",
+            "Gold"
+        ],
+        "transmission": [
+            "AUTO",
+            "MANUAL"
+        ]
+    }
+}
