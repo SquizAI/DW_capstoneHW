@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Data Analysis Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --light-bg: #f8f9fa;
+            --dark-bg: #2c3e50;
+            --text-color: #333;
+            --light-text: #f8f9fa;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--light-bg);
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background-color: var(--dark-bg);
+            color: var(--light-text);
+            padding: 2rem 0;
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        h2 {
+            font-size: 2rem;
+            color: var(--secondary-color);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 0.5rem;
+            margin-top: 2rem;
+        }
+        
+        .dashboard-info {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .visualization-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .viz-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        
+        .viz-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .viz-card img {
+            width: 100%;
+            height: auto;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .viz-info {
+            padding: 1.5rem;
+        }
+        
+        .viz-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-top: 0;
+            color: var(--secondary-color);
+        }
+        
+        .viz-desc {
+            color: #666;
+            margin-bottom: 1rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+        }
+        
+        .btn:hover {
+            background-color: #2980b9;
+        }
+        
+        footer {
+            background-color: var(--dark-bg);
+            color: var(--light-text);
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 4rem;
+        }
+        
+        .footer-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .footer-content p {
+            margin: 0.5rem 0;
+        }
+        
+        @media (max-width: 768px) {
+            .visualization-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>🚗 Car Data Analysis Dashboard</h1>
+            <p>Interactive visualizations of used car data analysis</p>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="dashboard-info">
+            <h2>Dataset Overview</h2>
+            <p>This dashboard provides analysis of a used car dataset with information about car models, prices, mileage, colors, and transmission types. The analysis helps understand patterns and relationships in the used car market.</p>
+            
+            <p><strong>Dataset Features:</strong></p>
+            <ul>
+                <li>🗓️ <strong>Year:</strong> Manufacturing year</li>
+                <li>🚙 <strong>Model:</strong> Car model name</li>
+                <li>💰 <strong>Price:</strong> Selling price in USD</li>
+                <li>📏 <strong>Mileage:</strong> Mileage on the odometer</li>
+                <li>🎨 <strong>Color:</strong> Car color</li>
+                <li>⚙️ <strong>Transmission:</strong> Type of transmission (AUTO, MANUAL)</li>
+            </ul>
+        </div>
+        
+        <h2>Key Visualizations</h2>
+        <div class="visualization-grid">
+            <div class="viz-card">
+                <img src="viz1_price_by_year.png" alt="Price Distribution by Year">
+                <div class="viz-info">
+                    <h3 class="viz-title">Price Distribution by Year</h3>
+                    <p class="viz-desc">Shows how car prices vary by manufacturing year, highlighting trends in pricing across different model years.</p>
+                    <a href="interactive_viz1.html" class="btn">View Interactive Version</a>
+                </div>
+            </div>
+            
+            <div class="viz-card">
+                <img src="viz2_price_vs_mileage.png" alt="Price vs Mileage by Transmission">
+                <div class="viz-info">
+                    <h3 class="viz-title">Price vs Mileage by Transmission</h3>
+                    <p class="viz-desc">Explores the relationship between price and mileage for different transmission types, revealing how these factors influence each other.</p>
+                    <a href="interactive_viz2.html" class="btn">View Interactive Version</a>
+                </div>
+            </div>
+            
+            <div class="viz-card">
+                <img src="viz3_color_distribution.png" alt="Car Color Distribution">
+                <div class="viz-info">
+                    <h3 class="viz-title">Car Color Distribution</h3>
+                    <p class="viz-desc">Displays the distribution of car colors in the dataset, showing popularity of different color choices.</p>
+                    <a href="interactive_viz3.html" class="btn">View Interactive Version</a>
+                </div>
+            </div>
+            
+            <div class="viz-card">
+                <img src="viz4_model_distribution.png" alt="Top 10 Car Models">
+                <div class="viz-info">
+                    <h3 class="viz-title">Top 10 Car Models</h3>
+                    <p class="viz-desc">Shows the most common car models in the dataset, highlighting which models appear most frequently.</p>
+                    <a href="interactive_viz4.html" class="btn">View Interactive Version</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>Created for Data Analysis Capstone Project, 2025</p>
+                <p>© 2025 All Rights Reserved</p>
+                <p>Created with ❤️ by <a href="https://github.com/SquizAI" style="color: white; text-decoration: underline;">SquizAI</a></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
